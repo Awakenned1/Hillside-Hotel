@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 
+
 app = Flask(__name__,
            template_folder='app/templates',  # Update template folder path
            static_folder='static')
+
 
 @app.route('/')
 def index():
