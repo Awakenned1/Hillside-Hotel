@@ -65,9 +65,14 @@ nav {
     font-weight: 500;
     transition: color 0.3s ease;
 }
+.hero-content h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem; /* Increased font size */
+    /* ...existing code... */
+}
 
 .nav-links a:hover {
-    color: #golden; /* Replace with your brand color */
+    color: #FFD700; /* Replace with your brand color */
 }
 
 nav.scrolled {
@@ -269,11 +274,7 @@ header {
     color: var(--dark-brown);
     margin-bottom: 3rem;
 }
-.hero-content h1 {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 4rem; /* Increased font size */
-    /* ...existing code... */
-}
+
 .story-card {
     background: white;
     border-radius: 20px;
