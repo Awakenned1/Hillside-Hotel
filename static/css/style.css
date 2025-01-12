@@ -23,14 +23,51 @@ body {
 
 nav {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px;
-    background: transparent;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-    transition: all 0.3s ease;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #golden; /* Replace with your brand color */
 }
 
 nav.scrolled {
@@ -43,17 +80,6 @@ nav.scrolled {
     font-size: 24px;
     font-weight: bold;
     color: var(--cream);
-}
-
-.nav-links a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: var(--cream);
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--light-brown);
 }
 
 .hero {
@@ -243,7 +269,11 @@ header {
     color: var(--dark-brown);
     margin-bottom: 3rem;
 }
-
+.hero-content h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem; /* Increased font size */
+    /* ...existing code... */
+}
 .story-card {
     background: white;
     border-radius: 20px;
