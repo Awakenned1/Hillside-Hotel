@@ -7,6 +7,7 @@ app = Flask(__name__,
            template_folder='build')
 app.config['SECRET_KEY'] = 'your-secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///hotel.db'
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 db = SQLAlchemy(app)
 
 @app.route('/')
@@ -31,5 +32,6 @@ def create_build_dir():
         os.makedirs(os.path.join(build_dir, 'static'))
 
 if __name__ == '__main__':
-    create_build_dir()
-    app.run(debug=True)
+    if os.environ.get('VERCEL_ENV') != 'production':
+        create_build_dir()
+        app.run(debug=True)
